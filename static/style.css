@@ -1,0 +1,110 @@
+body{
+    background:url("brett-ritchie-1vKTnwLMdqs-unsplash.jpg")  no-repeat center center ;
+    background-size: cover;
+    text-align: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+
+}
+.header{
+   border-radius: 10px;
+    border-bottom: 5px solid white;
+    height:20%;
+    display: flex;
+    flex-direction: row-reverse;
+
+}
+#head{margin-top: 10px;
+    width:90%;
+font-size: 3rem;
+}
+img{
+    height:80px;
+    width:80px;
+    border : 3px solid rgba(255, 255, 255, 0.833);
+    border-radius: 50%;
+}
+
+.outer-container{
+border: 5px solid rgba(255, 255, 255, 0.824) ;
+border-radius: 50px;
+color: white ;
+    margin:50px;
+    margin-top:100px;
+    height: 500px;
+    padding: 10px;
+    box-shadow: 4px 4px 4px rgb(186, 180, 180);
+}
+.container{
+    margin-top:10px;
+    height:auto;
+    display: flex;
+    flex-direction: row;
+    
+}
+.input_container{
+margin: 5px;
+    width: 50%;
+    border-radius: 20px;
+
+}
+input{
+    height: 30px;
+    width: 30px;
+    opacity: 80%;
+    justify-content: left;
+    display: flex;
+    padding-left: 9px;
+    margin: 19px;
+    font-size: 1.1rem;
+    width: 60%;
+    border-radius: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    box-shadow: 4px 4px 4px rgb(186, 180, 180);
+
+}
+input:hover{
+    opacity: 100%;
+    color: black;
+}
+label{
+    font-size: 1.1rem;
+    opacity: 90%;
+    width: 30%;
+    float: left;
+    margin-right: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+select{
+    border-radius: 50px;
+    height: 30px;
+    width: auto;
+    opacity: 80%;
+    display: block;
+    margin: 20px;
+    box-shadow: 4px 4px 4px rgb(186, 180, 180);
+}
+select:hover{
+    opacity: 100%;
+    color: black;
+}
+button{
+    opacity: 80%;
+    border-radius: 50px;
+    height: auto;
+    width: 200px;
+    box-shadow: 4px 4px 4px rgb(186, 180, 180);
+}
+button:hover{
+    opacity: 100%;
+    color: black;
+}
+.pred{
+    opacity: 90%;
+    margin-top: 10px;
+    width:90%;
+font-size: 3rem;
+}
