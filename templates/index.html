@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star_Class_Type</title>
+    <link rel="stylesheet" href=" {{ url_for('static', filename='style.css') }}">
+</head>
+
+<body> 
+<div class="outer-container">
+    <div class="header">
+        <div id="head">STARS_Spectral_Class_Prediction</div>
+        <div id="logo"><img src="{{ url_for('static', filename='daniele-levis-pelusi-Vo6A7rwmAJk-unsplash.jpg') }}" alt="logo_img"></div>
+        </div>
+
+        <div class="container">
+            <div class="input_container">
+                <form method="POST" action="/predict">
+                    <label > Temperature (K)</label>
+                    <input type="text" class="inp" name="Temperature" placeholder="range btw">
+                    <label > Luminosity(L/Lo)</label>
+                    <input type="text" class="inp" name="Luminosity" placeholder="range btw">
+                    <label > Radius(R/Ro)</label>
+                    <input type="text" class="inp" name="Radius" placeholder="range btw">
+                    <label > Absolute magnitude(Mv)</label>
+                    <input type="text" class="inp" name="Absolute_magnitude" placeholder="range btw">
+                    <label > Star type</label>
+                    <select name="Star_type" id="Star_type" >
+                        <option value="Brown Dwarf">Brown Dwarf</option>
+                        <option value="Red Dwarf">Red Dwarf</option>
+                        
+                        <option value="White Dwarf">White Dwarf</option>
+                        <option value="Main Sequence">Main Sequence</option>
+                        <option value="SuperGiants">SuperGiants</option>
+                        <option value="HyperGiants">HyperGiants</option>
+                    </select>
+                      
+        
+                    <label >Star_Color</label>
+                    <select id="Star_Color" name="Star_Color">
+                        <option value="Red" name="Red">'Red'</option>
+                        <option value="Blue White" name="Blue White">'Blue White'</option>
+                        <option value="White" name="White">'White'</option>
+                        <option value="Yellowish White" name="Yellowish White">'Yellowish White'</option>
+                        <option value="Blue white" name="Blue white">'Blue white'</option>
+                        <option value=" Pale yellow orange" name="Pale yellow orange">'Pale yellow orange'</option>
+                        <option value="Blue white" name="Blue">'Blue'</option>
+                        <option value="Blue" name="Blue">'Blue'</option>
+                        <option value="Whitish" name="Whitish">'Whitish'</option>
+                        <option value="yellow-white" name="yellow-white">'yellow-white'</option>
+                        <option value="white" name="white">'white'</option>
+                        <option value="White-Yellow" name="White-Yellow">'White-Yellow'</option>
+                        <option value="Orange" name="Orange">'Orange'</option>
+                        <option value="yellowish" name="yellowish">'yellowish'</option>
+                        <option value="Orange-Red" name="Orange-Red">'Orange-Red'</option>
+                        <option value="Blue-white" name="Blue-white">'Blue-white'</option>
+                        <option value="Yellowish" name="Yellowish">'Blue-white'</option>
+                       
+                    </select>
+                    <button type="submit">PREDICT_STAR<br>SPECTRUM</button>
+
+                </form>
+            </div>
+            <div class="pred">
+                {% if prediction %}
+                The Spectrum of Star BY giving <br>feature is "{{ prediction }}"
+            {% endif %}
+        </div>
+    </div>
+    <script type="module" src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
